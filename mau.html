@@ -1,0 +1,165 @@
+ <!-- AWP_In_Variable Name='"NUT_AUTO"' -->
+<!-- AWP_In_Variable Name='"BTG_Nut_Start"' -->
+<!-- AWP_In_Variable Name='"BTG_Nut_Stop"' -->
+<!-- AWP_In_Variable Name='"BTG_NUT_PAUSE"' -->
+<!-- AWP_In_Variable Name='"BTG_NUT_RESUME"' -->
+<!-- AWP_In_Variable Name='"BTG_Nut_khan(1)"' -->
+<!-- AWP_In_Variable Name='"dataweb".solon' -->
+<!-- AWP_In_Variable Name='"dataweb".chonmau'-->
+<!-- AWP_In_Variable Name='"RESET"' -->
+<!-- AWP_In_Variable Name='"dataweb".tocdo' -->
+<!-- AWP_In_Variable Name='"dataweb".solandap' -->
+<!-- AWP_In_Variable Name='"dataweb".tldo' -->
+<!-- AWP_In_Variable Name='"dataweb".tlvang'-->
+<!-- AWP_In_Variable Name='"dataweb".tlxanh' -->
+<!-- AWP_In_Variable Name='"dataweb".tltrang' -->
+<!-- AWP_In_Variable Name='"dataweb".canhbaohetlon' -->
+<!-- AWP_In_Variable Name='"dataweb".canhbaohetnap' -->
+<!-- AWP_In_Variable Name='"dataweb".canhbaohetson' -->
+ <!-- AWP_In_Variable Name='"dataweb".thetich' -->
+<!-- AWP_Enum_Def Name='trangthai1' Values= '
+              0: " Còn lon ",
+              1: " Cảnh báo  hết lon  "' -->
+<!-- AWP_Enum_Def Name='trangthai2' Values= '
+              0: " Còn nắp ",
+              1: " Cảnh báo hết lắp "' -->
+<!-- AWP_Enum_Def Name='trangthai3' Values= '
+              0: "Bể còn sơn ",
+              1: " Cảnh báo bể hết sơn "' -->
+
+<!-- AWP_Enum_Ref Name= '"dataweb".canhbaohetlon' Enum ="trangthai1"-->
+<!-- AWP_Enum_Ref Name= '"dataweb".canhbaohetnap' Enum ="trangthai2"-->
+<!-- AWP_Enum_Ref Name= '"dataweb".canhbaohetson' Enum ="trangthai3"-->
+
+
+
+<!-- AWP_In_Variable Name='"IEC_Counter_0_DB_1".CV' -->
+ <!-- AWP_In_Variable Name='"CREATE"' -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Industrial University of Ho Chi Minh City</title>
+ </head>
+ <body>
+ 
+     <!-- Main Screen -->
+     <div id="Screen_main" style="text-align: center;">
+         <div>
+             <div>
+                 <img src="img/logo.png" alt="Left Logo" style="display: block; margin: auto; width: 20%;">
+                 <div>
+                     <h1 style="color: navy; font-size: 2.5em;">INDUSTRIAL UNIVERSITY OF HO CHI MINH CITY</h1>
+                     <h2 style="color: darkred; font-size: 2em;">ĐIỀU KHIỂN HỆ THỐNG TRỘN SƠN TỰ ĐỘNG</h2>
+                 </div>
+             </div>
+             <div>
+                 <img src="img/7.png" alt="Color Wheel" style="display: block; margin: auto; width: 20%; float: right;">
+                 <div>
+                     <h3 style="font-size: 1.5em;">Please fill out the form</h3>
+                   
+                         <label for="colorIdInput" style="font-size: 1.2em;">Enter Color ID:</label>
+                         <form method="post">
+                         <input type="text" id="colorIdInput" name='"dataweb".chonmau' placeholder="Enter Color ID" style="font-size: 1em;">
+                         <br><br>
+                         
+                             <label for="colorRedInput" style="font-size: 1.2em;">Color Red:</label>
+                             <input type="text" id="colorRedInput" name='"dataweb".tldo' placeholder="Enter Red Color" style="font-size: 1em;">
+                             
+                             <label for="colorYellowInput" style="font-size: 1.2em;">Color Yellow:</label>
+                             <input type="text" id="colorYellowInput" name='"dataweb".tlvang' placeholder="Enter Yellow Color" style="font-size: 1em;">
+                             <br><br>
+                         
+            
+                             <label for="colorBlueInput" style="font-size: 1.2em;">Color Blue:</label>
+                             <input type="text" id="colorBlueInput" name='"dataweb".tlxanh' placeholder="Enter Blue Color" style="font-size: 1em;">
+                             
+                             <label for="colorWhiteInput" style="font-size: 1.2em;">Color White:</label>
+                             <input type="text" id="colorWhiteInput" name='"dataweb".tltrang' placeholder="Enter White Color" style="font-size: 1em;">
+                           
+                             <br><br>
+                             <label for="tankInput" style="font-size: 1.2em;">Enter Capacity:</label>
+                             <input type="text" id="tankInput" name='"dataweb".thetich' placeholder="Enter Capacity" style="font-size: 1em;">
+                         <br><br>
+                            
+                         <label for="quantityInput" style="font-size: 1.2em;">Enter Quantity:</label>
+                         <input type="text" id="quantityInput" name='"dataweb".solon' placeholder="Enter Quantity" style="font-size: 1em;">
+                         <br><br>
+                         <label for="speedInput" style="font-size: 1.4em;">Enter Speed:</label>
+                         <input type="text" id="speedInput" name='"dataweb".tocdo'  placeholder="Enter Speed" style="font-size: 1em;">
+                         <br><br>
+                         <label for="lidInput" style="font-size: 1.2em;">Enter number of times the lid is closed:</label>
+                         <input type="text" id="lidInput" name='"dataweb".solandap'placeholder="Enter number of times the lid is closed" style="font-size: 1em;">
+                         <br><br>
+                         <input type="hidden" name='"CREATE"' value="1">
+                         <input type="submit" value="CREATE" style="background-color: green; color: white; font-size: 1.2em;">
+                         
+
+                     </form>
+                     
+                     
+                     <div style="margin-top: 20px; text-align: center;">
+                         <form id="autoForm" style="display: inline-block; margin: 5px;">
+                             <input type="submit" value="Auto" style="background-color: green; color: white; font-size: 1.2em;">
+                             <input type="hidden" name='"NUT_AUTO"' value="1">
+                         </form>
+                         <form id="startForm" style="display: inline-block; margin: 5px;">
+                            <input type="submit" value="Start" style="background-color: green; color: white; font-size: 1.2em;">
+                            <input type="hidden" name='"BTG_Nut_Start"' value="1">
+                        </form>
+                         
+                        </form>
+                         <form id="stopForm" style="display: inline-block; margin: 5px;">
+                             <input type="submit" value="Stop" style="background-color: green; color: white; font-size: 1.2em;">
+                             <input type="hidden" name='"BTG_Nut_Stop"' value="1">
+                            
+                             <input type="hidden" name='"NUT_AUTO"' value="0">
+                             <input type="hidden" name='"BTG_NUT_RESUME"' value="0">
+                             <input type="hidden" name='"BTG_NUT_PAUSE"' value="0">
+                             <input type="hidden" name='"RESET"' value="0">
+                         </form>
+                         <form id="resumeForm" style="display: inline-block; margin: 5px;">
+                             <input type="submit" value="Resume" style="background-color: green; color: white; font-size: 1.2em;">
+                             <input type="hidden" name='"BTG_NUT_RESUME"' value="1">
+                           
+                              <input type="hidden" name='"NUT_AUTO"' value="0">
+                              <input type="hidden" name='"BTG_Nut_Stop"' value="0">
+                              <input type="hidden" name='"RESET"' value="0">
+                         </form>
+                         <form id="pauseForm" style="display: inline-block; margin: 5px;">
+                             <input type="submit" value="Pause" style="background-color: green; color: white; font-size: 1.2em;">
+                             <input type="hidden" name='"BTG_NUT_PAUSE"' value="1">
+                             <input type="hidden" name='"BTG_NUT_RESUME"' value="0">
+                             <input type="hidden" name='"RESET"' value="1">
+                         </form>
+                         <form id="emoForm" style="display: inline-block; margin: 5px;">
+                            <input type="submit" value="EMO" style="background-color: green; color: rgb(255, 255, 255); font-size: 1.2em;">
+                            <input type="hidden" name='"BTG_Nut_khan(1)"' value="1">
+                           
+                            
+                        </form>
+
+                     </div>
+                 </div>
+                 <div style="margin-top: 20px;">
+                     <h4 style="margin-top: 20px; font-size: 1.5em;">Number of completed cans
+                     <div >:="IEC_Counter_0_DB_1".CV:</div> </h4>
+                 </div>
+                 <br><br>
+               <h6 style="margin-top: 20px; font-size: 1.5em;">  Trạng thái lon <td>  :="dataweb".canhbaohetlon: </td> </h6>
+               
+                 <h5 style="margin-top: 20px; font-size: 1.5em;"> Trạng thái nắp <td>  :="dataweb".canhbaohetnap: </td> </h5>
+                 
+                 <h4 style="margin-top: 20px; font-size: 1.5em;"> Trạng thái bể sơn <td>   :="dataweb".canhbaohetson: </td> </h4>
+             </div>
+             
+         </div>
+     </div>
+ 
+     
+     
+ </body>
+ </html>
+ 
